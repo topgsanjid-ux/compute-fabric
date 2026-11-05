@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compute-fabric"
+version = "0.1.0"
+description = "Linux tool to monitor GPU link errors, thermal spikes at 1 kHz, predict crashes within 15 min, and re-route compute tasks."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "nvidia-ml-py",
+    "pandas",
+    "matplotlib",
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
